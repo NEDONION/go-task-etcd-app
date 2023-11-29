@@ -1,4 +1,3 @@
-# micro-todoList
 # Go-Micro V4 + RabbitMQ 构造简单备忘录
 
 将原项目的micro的v2升到v4，服务发现使用etcd，支持熔断机制，token验证，网关和各模块之间的rpc通信等
@@ -9,9 +8,6 @@
 
 **[备忘录模块](https://blog.csdn.net/weixin_45304503/article/details/122301707)**
 
-# 项目的视频介绍地址
-
-[Go-Micro+RabbitMQ 构建简单备忘录](https://www.bilibili.com/video/BV1h44y1L7LN)
 
 # 项目的主要功能介绍
 
@@ -87,41 +83,6 @@ task/
 
 `config/config.ini`文件，直接将 `config.ini.example-->config.ini` 就可以了
 conf/config.ini 文件
-```ini
-[service]
-AppMode = debug
-HttpPort = :4000
-
-[mysql]
-Db = mysql
-DbHost = 127.0.0.1
-DbPort = 3306
-DbUser = root
-DbPassWord = root
-DbName = micro_todolist
-Charset = utf8mb4
-
-[rabbitmq]
-RabbitMQ = amqp
-RabbitMQUser = guest
-RabbitMQPassWord = guest
-RabbitMQHost = localhost
-RabbitMQPort = 5672
-
-[etcd]
-EtcdHost = localhost
-EtcdPort = 2379
-
-[server]
-UserServiceAddress = 127.0.0.1:8082
-TaskServiceAddress = 127.0.0.1:8083
-
-[redis]
-RedisHost = localhost
-RedisPort = 2379
-RedisUsername = micro_todolist
-RedisPassword = 
-```
 
 
 # 运行简要说明
@@ -137,28 +98,18 @@ make env-up
 make run
 ```
 
+3. 启动 RabbitMQ
+
+- http://localhost:15672
+- user: guest
+- password: guest
+
 **注意：**
 1. 保证rabbitMQ开启状态
 2. 保证etcd开启状态
 3. 依次执行各模块下的main.go文件
 
 **如果出错一定要注意打开etcd的keeper查看服务是否注册到etcd中！！**
-
-# 导入接口文档
-
-打开postman，点击导入
-
-![postman导入](doc/1.点击import导入.png)
-
-选择导入文件
-![选择导入接口文件](doc/2.选择文件.png)
-
-![导入](doc/3.导入.png)
-
-效果
-
-![postman](doc/4.效果.png)
-
 
 
 
