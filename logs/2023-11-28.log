@@ -1,0 +1,4 @@
+{"level":"error","msg":"UserRegister:fallback failed with 'Error 1062 (23000): Duplicate entry 'FanOne11' for key 'user.user_name''. run error was 'Error 1062 (23000): Duplicate entry 'FanOne11' for key 'user.user_name''","time":"2023-11-28 16:41:12"}
+{"level":"error","msg":"UserRegister:fallback failed with 'Error 1062 (23000): Duplicate entry 'FanOne11' for key 'user.user_name''. run error was 'Error 1062 (23000): Duplicate entry 'FanOne11' for key 'user.user_name''","time":"2023-11-28 16:41:38"}
+{"level":"info","msg":"\u003cnil\u003e","time":"2023-11-28 17:22:47"}
+{"level":"info","msg":"Received run Task: {\"id\":0,\"uid\":1,\"title\":\"FanOne\",\"content\":\"点赞！\",\"start_time\":0,\"end_time\":0,\"status\":0,\"start\":0,\"limit\":0}","time":"2023-11-28 17:22:51"}
