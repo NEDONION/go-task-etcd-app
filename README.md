@@ -14,10 +14,9 @@
 - 用户注册登录 ( jwt-go鉴权 )
 - 新增/删除/修改/查询 备忘录
 
-# 项目主要依赖：
+# Requisites
 
-**Golang V1.18**
-
+- Golang >= V1.18
 - Gin
 - Gorm
 - mysql
@@ -30,7 +29,7 @@
 - jwt-go
 - crypto
 
-# 项目结构
+# Structure
 ## 1.micro_todolist 项目总体
 ```
 micro-todolist/
@@ -82,10 +81,9 @@ task/
 
 
 `config/config.ini`文件，直接将 `config.ini.example-->config.ini` 就可以了
-conf/config.ini 文件
 
 
-# 运行简要说明
+# How to start
 1. 启动环境
 
 ```shell
