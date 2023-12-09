@@ -10,7 +10,7 @@ import (
 	"github.com/CocaineCong/micro-todoList/app/gateway/middleware"
 )
 
-// NewRouter 对外暴露的接口
+// NewRouter 整个服务对外暴露的接口
 func NewRouter() *gin.Engine {
 	ginRouter := gin.Default()
 	ginRouter.Use(middleware.Cors())

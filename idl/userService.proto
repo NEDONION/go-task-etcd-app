@@ -2,6 +2,10 @@ syntax="proto3";
 package services;
 option go_package ="./;pb";
 
+// 用 protoc-gen-go 插件 生成 pb 文件
+// command: protoc -I ./idl user.proto --micro_out ./idl/pb --go_out=./idl/pb
+// command: protoc-go-inject-tag -input=./idl/pb/userService.pb.go
+
 message UserModel{
   // @inject_tag: json:"id" form:"id"
   uint32 id=1;
