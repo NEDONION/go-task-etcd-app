@@ -1,36 +1,33 @@
-# Go-Micro V4 + RabbitMQ 构造简单备忘录
-
-将原项目的micro的v2升到v4，服务发现使用etcd，支持熔断机制，token验证，网关和各模块之间的rpc通信等
-
-# 项目的详细博客地址
-
-**[用户模块](https://blog.csdn.net/weixin_45304503/article/details/122286980)**
-
-**[备忘录模块](https://blog.csdn.net/weixin_45304503/article/details/122301707)**
+# A Task App with Go, RabbitMQ and etcd 
 
 
-# 项目的主要功能介绍
+## Features
 
-- 用户注册登录 ( jwt-go鉴权 )
-- 新增/删除/修改/查询 备忘录
+- User Authorization & Authentication with JWT
+- Task APIs CRUD
+- Integrated RabbitMQ as Message Queue
+- IDL (Interface Descriptive Language) & proto
+- Gateway & gRPC
+- Integrated Hystrix as Circuit Breaker
 
-# Requisites
+## Requisites
 
 - Golang >= V1.18
 - Gin
 - Gorm
-- mysql
-- go-micro
+- MySQL
+- go-micro (v4)
 - protobuf
-- grpc
-- amqp
+- gRPC
+- amqp (RabbitMQ Client Library)
 - ini
 - hystrix
 - jwt-go
 - crypto
 
-# Structure
-## 1.micro_todolist 项目总体
+## Structure
+
+### 1. Overall 项目总体
 ```
 micro-todolist/
 ├── app                   // 各个微服务
@@ -52,7 +49,7 @@ micro-todolist/
 └── types                 // 定义各种结构体
 ```
 
-## 2.gateway 网关部分
+### 2. gateway 网关
 ```
 gateway/
 ├── cmd                   // 启动入口
@@ -65,7 +62,7 @@ gateway/
 └── wrappers              // 熔断
 ```
 
-## 3.user && task 用户与任务模块
+### 3. user && task 用户与任务模块
 ```
 task/
 ├── cmd                   // 启动入口
@@ -83,20 +80,21 @@ task/
 `config/config.ini`文件，直接将 `config.ini.example-->config.ini` 就可以了
 
 
-# How to start
-1. 启动环境
+## How to start
+
+1. First-time start (Run Docker env)
 
 ```shell
 make env-up
 ```
 
-2. 运行服务
+2. Start Services
 
 ```shell
 make run
 ```
 
-3. 启动 RabbitMQ
+3. Run RabbitMQ
 
 - http://localhost:15672
 - user: guest
@@ -109,5 +107,7 @@ make run
 
 **如果出错一定要注意打开etcd的keeper查看服务是否注册到etcd中！！**
 
-
+## References
+- [用户模块](https://blog.csdn.net/weixin_45304503/article/details/122286980)
+- [备忘录模块](https://blog.csdn.net/weixin_45304503/article/details/122301707)
 
