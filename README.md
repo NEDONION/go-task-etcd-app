@@ -25,7 +25,7 @@
 - jwt-go
 - crypto
 
-## Structure
+## Project Structure
 
 ### 1. Overall 项目总体
 ```
