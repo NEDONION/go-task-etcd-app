@@ -17,13 +17,10 @@
 - Gorm
 - MySQL
 - go-micro (v4)
-- protobuf
+- Protobuf
 - gRPC
 - amqp (RabbitMQ Client Library)
-- ini
-- hystrix
-- jwt-go
-- crypto
+- Hystrix
 
 ## Project Structure
 
